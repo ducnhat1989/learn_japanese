@@ -1,0 +1,24 @@
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  host: localhost
+  username: root
+  password: 
+
+development:
+  <<: *common
+  database: learn_japanese
+
+test:
+  <<: *common
+  database: learn_japanese_test
+
+staging:
+  <<: *common
+  database: learn_japanese_staging
+
+production:
+  <<: *common
+  database: learn_japanese_1
